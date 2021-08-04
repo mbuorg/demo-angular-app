@@ -5,9 +5,14 @@ name: Build and deploy Node.js app to Azure Web App - sampleangularnew
 
 on:
   push:
+    paths:
+      - 'sample-angular-app/'
+      - '.github/workflows/main.yml'
     branches:
-      - main
-  workflow_dispatch:
+      - master
+defaults:
+  run:
+    working-directory: sample-angular-app
 
 jobs:
   build:
@@ -31,7 +36,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: deploy_dist
-        path: sample-angular-app/dist/sample-angular-artifact
+        path: sample-angular-app/dist
 
   deploy:
     runs-on: ubuntu-latest
