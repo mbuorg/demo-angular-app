@@ -31,7 +31,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: deploy_dist
-        path: dist/sample-angular-artifact
+        path: sample-angular-app/dist/sample-angular-artifact
 
   deploy:
     runs-on: ubuntu-latest
