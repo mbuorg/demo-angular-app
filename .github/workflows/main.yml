@@ -6,13 +6,13 @@ name: Build and deploy Node.js app to Azure Web App - sampleangularnew
 on:
   push:
     paths:
-      - 'sample-angular-app/'
+      - '.'
       - '.github/workflows/main.yml'
     branches:
       - master
 defaults:
   run:
-    working-directory: sample-angular-app
+    working-directory: .
 
 jobs:
   build:
