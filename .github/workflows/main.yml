@@ -33,7 +33,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: deploy_dist
-        path: 'dist/'
+        path: 'dist/angular-sampleapp'
 
     - name: Download artifact from build job
       uses: actions/download-artifact@v2
