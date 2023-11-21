@@ -5,7 +5,7 @@ name: Build and deploy Angular app to Azure Web App - toolkitdemo-angular-app
 on:
   push:
     branches:
-      - master
+      - master1
   workflow_dispatch:
 
 env:
